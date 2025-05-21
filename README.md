@@ -28,45 +28,38 @@ cd metadata-explorer-api
 2. Set up a virtual environment
 If you want to work with the project locally, create and activate a Python virtual environment:
 
-bash
-Copy
-Edit
+```bash
 python -m venv venv
 source venv/bin/activate  # For macOS/Linux
 venv\Scripts\activate     # For Windows
 3. Install dependencies
-bash 
+```bash 
 setup
-Copy
-Edit
+
 pip install -r requirements.txt
 4. Configure environment variables
 Make sure to add any sensitive information (like database credentials or API keys) to a .env file. You can use .env.example as a template.
 
-bash
-Copy
-Edit
+```bash
+
 SECRET_KEY=your-secret-key
 DATABASE_URL=your-database-url
 5. Run the application locally
 You can now run the FastAPI server locally:
 
-bash
-Copy
-Edit
+``bash
+
 uvicorn app.main:app --reload
 Access the Swagger UI at http://127.0.0.1:8000/docs.
 
 Docker Setup
 1. Build Docker image
-bash
-Copy
-Edit
+```bash
+
 docker build -t metadata-explorer-api .
 2. Run the Docker container
-bash
-Copy
-Edit
+```bash
+
 docker run -d -p 8000:8000 metadata-explorer-api
 Your application will be available at http://localhost:8000.
 
@@ -74,23 +67,14 @@ API Endpoints
 1. GET /metadata
 Retrieve all metadata entries.
 
-bash
-Copy
-Edit
 GET /metadata
 2. GET /metadata/{id}
 Retrieve a specific metadata entry by ID.
 
-bash
-Copy
-Edit
 GET /metadata/{id}
 3. POST /metadata
 Create a new metadata entry.
 
-bash
-Copy
-Edit
 POST /metadata
 Content-Type: application/json
 {
@@ -100,9 +84,6 @@ Content-Type: application/json
 4. PUT /metadata/{id}
 Update an existing metadata entry.
 
-bash
-Copy
-Edit
 PUT /metadata/{id}
 Content-Type: application/json
 {
@@ -112,12 +93,8 @@ Content-Type: application/json
 5. DELETE /metadata/{id}
 Delete a metadata entry.
 
-bash
-Copy
-Edit
 DELETE /metadata/{id}
-CI/CD Setup
-This project can be deployed using continuous integration/continuous deployment (CI/CD) pipelines. For example, GitHub Actions or CircleCI can be set up to automate testing, building, and deployment.
+
 
 Future Enhancements
 Integrate with other systems for metadata exploration.
@@ -139,30 +116,4 @@ Push to the branch (git push origin feature-name)
 
 Create a new Pull Request
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
-For questions or suggestions, please contact your email.
-
-markdown
-Copy
-Edit
-
----
-
-### What’s included:
-- **Project Overview**: Description of what the project does and its key technologies.
-- **Features**: Features like CRUD operations and Docker integration.
-- **Installation**: Clear steps on how to clone, install dependencies, and run the app locally.
-- **Docker Setup**: Instructions for Dockerizing the app and running it in a container.
-- **API Endpoints**: A list of routes and example requests for each endpoint.
-- **CI/CD Setup**: Encouragement to integrate automated testing, building, and deployment pipelines.
-- **Future Enhancements**: Possible future additions to the project.
-- **Contributing**: Steps for contributing to the project.
-- **License**: A standard open-source license section (MIT).
-- **Contact**: Contact information for users of the repo.
-
----
-
-Now you can copy this into your `README.md` file on your project repository! Let me know if you nee
