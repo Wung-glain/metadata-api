@@ -51,11 +51,11 @@ DATABASE_URL=your-database-url
 5. Run the application locally
 You can now run the FastAPI server locally:
 
-``bash
+```bash
 
 uvicorn app.main:app --reload
-Access the Swagger UI at http://127.0.0.1:8000/docs.
 ```
+Access the Swagger UI at http://127.0.0.1:8000/docs.
 
 API Endpoints
 1. GET /metadata
