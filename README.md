@@ -26,17 +26,20 @@ The **Metadata Explorer API** is a FastAPI-based RESTful API that allows users t
 git clone https://github.com/your-username/metadata-explorer-api.git
 cd metadata-explorer-api
 2. Set up a virtual environment
+
 If you want to work with the project locally, create and activate a Python virtual environment:
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # For macOS/Linux
 venv\Scripts\activate     # For Windows
+```
 3. Install dependencies
-```bash 
-setup
 
+setup
+```bash
 pip install -r requirements.txt
+```
 4. Configure environment variables
 Make sure to add any sensitive information (like database credentials or API keys) to a .env file. You can use .env.example as a template.
 
@@ -44,6 +47,7 @@ Make sure to add any sensitive information (like database credentials or API key
 
 SECRET_KEY=your-secret-key
 DATABASE_URL=your-database-url
+```
 5. Run the application locally
 You can now run the FastAPI server locally:
 
@@ -51,17 +55,7 @@ You can now run the FastAPI server locally:
 
 uvicorn app.main:app --reload
 Access the Swagger UI at http://127.0.0.1:8000/docs.
-
-Docker Setup
-1. Build Docker image
-```bash
-
-docker build -t metadata-explorer-api .
-2. Run the Docker container
-```bash
-
-docker run -d -p 8000:8000 metadata-explorer-api
-Your application will be available at http://localhost:8000.
+```
 
 API Endpoints
 1. GET /metadata
